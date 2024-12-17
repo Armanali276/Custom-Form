@@ -8,9 +8,9 @@ const app = express();
 
 // Use environment variables
 const shopify = new Shopify({
-    shopName: process.env.SHOP_NAME,
-    apiKey: process.env.SHOPIFY_API_KEY,
-    password: process.env.SHOPIFY_PASSWORD
+  shopName: process.env.SHOP_NAME,
+  apiKey: process.env.SHOPIFY_API_KEY,
+  password: process.env.SHOPIFY_PASSWORD
 });
 
 // Middleware
@@ -127,8 +127,5 @@ app.post('/submit-form', async (req, res) => {
   }
 });
 
-// Start the server
-const PORT = process.env.PORT;
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Export the app for Vercel
+module.exports = app;
