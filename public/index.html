@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="./styles.css">
+    <div class="bazaar-csform hide">
+        <div class="container">
+            <!-- Welcome -->
+            <div class="step-form welcome-form text-center" id="step-0">
+                <img src="https://cdn.shopify.com/s/files/1/0610/9963/8942/files/Screenshot_7.png?v=1734129735" width="200" height="" alt="">
+                <h2>Welcome to The Bazaar!</h2>
+                <p>Your journey to seamless shopping starts here.</p>
+                <div class="step-footer text-center">
+                    <button type="button" class="button next" data-next="step-login">GET STARTED</button>
+                </div>
+                <span>Already having an account? <span class="next login-link" data-next="step-login">LogJn</span></span>
+            </div>
+            <!-- Login Form -->
+            <div class="step-form hide" id="step-login">
+                <img src="https://cdn.shopify.com/s/files/1/0610/9963/8942/files/Screenshot_7.png?v=1734129735" width="200" height="" alt="">
+                <form action="/login">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="customer[email]" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="customer[password]" placeholder="Password" required>
+                    </div>
+                    
+                    <div class="submit">
+                        <button type="submit" class="button">Log in</button>
+                    </div>
+                </form>
+                <div class="step-footer text-center">
+                    Not having an account? <span class="next login-link" data-next="step-1">Sign up</span>
+                </div>
+            </div>
+            <!-- Step 1 -->
+            <form class="step-form hide" id="step-1">
+                <h4>Question 1 / 10</h4>
+                <h2>What is your name?</h2>
+                <div class="input-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+                </div>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-login">Prev</button>
+                    <button type="button" class="button next" data-next="step-2">Next</button>
+                </div>
+            </form>
+
+            <!-- Step 2 -->
+            <form class="step-form hide" id="step-2">
+                <h4>Question 2 / 10</h4>
+                <h2>What type of business do you run?</h2>
+                <div class="input-group">
+                    <label for="business">Business Type</label>
+                    <select id="business" name="business" required>
+                        <option value="Wholesale">Wholesale</option>
+                        <option value="Retail">Retail</option>
+                    </select>
+                </div>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-1">Prev</button>
+                    <button type="button" class="button next" data-next="step-3">Next</button>
+                </div>
+            </form>
+
+            <!-- Step 3 -->
+            <form class="step-form hide" id="step-3">
+                <h4>Question 3 / 10</h4>
+                <h2>What's the name of your store?</h2>
+                <div class="input-group">
+                    <label for="store_name">Store Name</label>
+                    <input type="text" id="store_name" name="store_name" placeholder="Store Name" required>
+                </div>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-2">Prev</button>
+                    <button type="button" class="button next" data-next="step-4">Next</button>
+                </div>
+            </form>
+
+            <!-- Step 4 -->
+            <form class="step-form hide" id="step-4">
+                <h4>Question 4 / 10</h4>
+                <h2>What categories do you sell?</h2>
+                <div class="error"></div>
+                <div class="input-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="categories" value="automotive">
+                        AUTOMOTIVE
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="baby">
+                        BABY
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="cleaning">
+                        CLEANING
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="food">
+                        FOOD
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="houseware">
+                        HOUSEWARE
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="pet-products">
+                        PET PRODUCTS
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="arts-crafts">
+                        ARTS & CRAFTS
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="beauty">
+                        BEAUTY
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="electronics">
+                        Electronics
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="home-garden">
+                        HOME & GARDEN
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="pest-control">
+                        PEST CONTROL
+                    </label>
+                    <label>
+                        <input type="checkbox" name="categories" value="softgoods">
+                        SOFTGOODS
+                    </label>
+                </div>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-3">Prev</button>
+                    <button type="button" class="button next" data-next="step-5">Next</button>
+                </div>
+            </form>
+
+            <!-- Step 5 -->
+            <form class="step-form hide" id="step-5">
+                <h4>Question 5 / 10</h4>
+                <h2>What categories you wish you sold more of?</h2>
+                <div class="error"></div> 
+                <div class="input-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="automotive">
+                        AUTOMOTIVE
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="baby">
+                        BABY
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="cleaning">
+                        CLEANING
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="food">
+                        FOOD
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="houseware">
+                        HOUSEWARE
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="pet-products">
+                        PET PRODUCTS
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="arts-crafts">
+                        ARTS & CRAFTS
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="beauty">
+                        BEAUTY
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="electronics">
+                        Electronics
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="home-garden">
+                        HOME & GARDEN
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="pest-control">
+                        PEST CONTROL
+                    </label>
+                    <label>
+                        <input type="checkbox" name="want_to_sell_more_of" value="softgoods">
+                        SOFTGOODS
+                    </label>
+                </div>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-4">Prev</button>
+                    <button type="button" class="button next" data-next="step-6">Next</button>
+                </div>
+            </form>
+            <!-- Step 6 -->
+            <form class="step-form hide" id="step-6">
+                <h4>Question 6 / 10</h4>
+                <h2>What categories you wish you sold more of?</h2>
+                <div class="error"></div> 
+                <div class="input-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="when_purchasing_wholesale_products" value="WIDE SELECTION OF PRODUCTS">
+                        WIDE SELECTION OF PRODUCTS
+                    </label>
+                    <label>
+                        <input type="checkbox" name="when_purchasing_wholesale_products" value="LOW PRICES">
+                        LOW PRICES
+                    </label>
+                    <label>
+                        <input type="checkbox" name="when_purchasing_wholesale_products" value="BRAND NAMES">
+                        BRAND NAMES
+                    </label>
+                    <label>
+                        <input type="checkbox" name="when_purchasing_wholesale_products" value="EXCLUSIVE OFFERS">
+                        EXCLUSIVE OFFERS
+                    </label>
+                    <label>
+                        <input type="checkbox" name="when_purchasing_wholesale_products" value="SHIPPING OPTIONS">
+                        SHIPPING OPTIONS
+                    </label>
+                </div>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-5">Prev</button>
+                    <button type="button" class="button next" data-next="step-7">Next</button>
+                </div>
+            </form>
+
+            <!-- Step 7 -->
+            <form class="step-form hide" id="step-7">
+                <h4>Question 7 / 10</h4>
+                <h2>Does your store have a website or social media page?</h2>
+                <div class="input-group">
+                    <label for="website_social">Does your store have a website or social media page?</label>
+                    <input type="text" id="website_social" name="website_social" placeholder="Website / Social Media Page">
+                </div>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-6">Prev</button>
+                    <button type="button" class="button next" data-next="step-8">Next</button>
+                </div>
+            </form>
+
+            <!-- Step 8 -->
+            <form class="step-form hide" id="step-8">
+                <h4>Question 8 / 10</h4>
+                <h2>Where can we send you offers?</h2>
+                <div class="error"></div> 
+                <div class="input-group checkbox-group">
+                    <label>
+                        <input type="checkbox" value="phone">
+                        PHONE (SMS)
+                    </label>
+                    <label>
+                        <input type="checkbox" value="email">
+                        E-MAIL
+                    </label>
+                </div>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-7">Prev</button>
+                    <button type="button" class="button next" data-next="step-9">Next</button>
+                </div>
+            </form>
+
+            <!-- Step 9 -->
+            <form class="step-form hide" id="step-9">
+                <h4>Question 9 / 10</h4>
+                <div class="error"></div> 
+                <div class="phone-field">
+                    <h2>What is your phone number?</h2>
+                    <div class="input-group">
+                        <select id="country_code" style="width: 30%;">
+                            <option value="" disabled selected>Select</option>
+                            <option value="+1" data-country="US">+1</option>
+                            <option value="+91" data-country="IN">+91</option>
+                            <option value="+44" data-country="GB">+44</option>
+                            <option value="+92" data-country="PK">+92</option>
+                        </select>
+                        <input type="hidden" id="phone" name="phone" placeholder="Phone">
+                        <input type="tel" id="cs_phone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="email-field">
+                    <h2>What is your email?</h2>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-8">Prev</button>
+                    <button type="button" class="button next" data-next="step-10">Next</button>
+                </div>
+            </form>
+
+            <!-- Step 10 -->
+            <form class="step-form hide" id="step-10">
+                <h4>Question 10 / 10</h4>
+                <h2>Let's set a password for your account</h2>
+                <div class="error"></div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" autocomplete="off">
+                </div>
+                <div class="input-group hide" id="confirm-password-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" autocomplete="off">
+                    <p id="match-message" class="invalid hide">Passwords do not match.</p>
+                </div>
+                <ul id="password-requirements">
+                    <li id="length" class="invalid">✔️ Minimum length: 8 characters</li>
+                    <li id="special" class="invalid">✔️ Introduce a special character</li>
+                    <li id="uppercase-lowercase" class="invalid">✔️ Have both lower and upper case characters</li>
+                </ul>
+                <div class="step-footer text-center">
+                    <button type="button" class="button prev" data-prev="step-9">Prev</button>
+                    <button type="button" class="button next" data-next="done">Next</button>
+                </div>
+            </form>
+
+            <!-- Completion Message -->
+            <div class="step-form hide" id="done">
+                <div class="loader hide">Load...</div>
+                <div class="error text-center"></div>
+                <div class="inner">
+                    <h2>All Done!</h2>
+                    <p>You have completed all the steps.</p>
+                    <div class="step-footer text-center">
+                        <button type="button" class="button" id="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./countries.js"></script>
+    <script src="./script.js" defer="defer"></script>
+</body>
+</html>
